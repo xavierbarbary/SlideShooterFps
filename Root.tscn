@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Root.gd" type="Script" id=1]
+[ext_resource path="res://Test Room.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Ball.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Camera.gd" type="Script" id=4]
+
+[node name="Root" type="Node" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="Test Room" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="Ball" parent="." index="1" instance=ExtResource( 3 )]
+
+transform = Transform( 0.999992, 0.00140233, -0.00367346, -0.00141528, 0.999993, -0.00352814, 0.0036685, 0.00353331, 0.999987, 0, 1.26972, 0 )
+
+[node name="Camera" type="Camera" parent="." index="2"]
+
+transform = Transform( -1.62921e-07, 0.319394, -0.947622, 0, 0.947622, 0.319394, 1, 5.20358e-08, -1.54387e-07, -6.42226, 3.90927, 0 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = false
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
+script = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+
