@@ -8,3 +8,4 @@ This is a simple Git Companion plugin for @godotengine
 
 ## minnor rewrite
 ## added godotengine 3 support and some other features
+# SlideShooterFps
