@@ -32,4 +32,4 @@ func _physics_process(delta):
 	velocity = set_angular_velocity(velocity)
 
 	if Input.is_action_pressed("ui_jump"):
-		velocity.y = jumpHeight
+		set_axis_velocity(Vector3(0,jumpHeight,0))
