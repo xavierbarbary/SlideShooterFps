@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Root.gd" type="Script" id=1]
 [ext_resource path="res://Test Room.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Camera.gd" type="Script" id=3]
 [ext_resource path="res://Ball.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Gui.tscn" type="PackedScene" id=5]
 
 [node name="Root" type="Node" index="0"]
 
@@ -32,5 +33,9 @@ _sections_unfolded = [ "Transform" ]
 [node name="Ball" parent="." index="2" instance=ExtResource( 4 )]
 
 transform = Transform( 0.999992, 0.00140233, -0.00367346, -0.00141528, 0.999993, -0.00352814, 0.0036685, 0.00353331, 0.999987, 0, 1.26972, 0 )
+visible = false
+_sections_unfolded = [ "Collision", "Visibility" ]
+
+[node name="Gui" parent="." index="3" instance=ExtResource( 5 )]
 
 

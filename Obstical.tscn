@@ -65,7 +65,7 @@ _sections_unfolded = [ "Albedo" ]
 
 extents = Vector3( 1.26958, 1, 1.4805 )
 
-[node name="Obstical" type="RigidBody"]
+[node name="Obstical" type="RigidBody" index="0"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
