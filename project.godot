@@ -11,8 +11,12 @@ config_version=3
 [application]
 
 config/name="Slide Shoot FPS"
-run/main_scene="res://Menu.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Menus/Main.tscn"
+config/icon="res://Materials/icon.png"
+
+[autoload]
+
+gamestate="*res://Scripts/gamestate.gd"
 
 [input]
 

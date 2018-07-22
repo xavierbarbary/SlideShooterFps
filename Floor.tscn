@@ -3,6 +3,8 @@
 [ext_resource path="res://Materials/aluminium_flow.png" type="Texture" id=1]
 [ext_resource path="res://Materials/aluminium_normal.png" type="Texture" id=2]
 
+
+
 [sub_resource type="SpatialMaterial" id=1]
 
 render_priority = 0
@@ -122,7 +124,7 @@ _sections_unfolded = [ "Depth" ]
 
 points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
 
-[node name="Floor" type="Spatial" index="0"]
+[node name="Floor" type="Spatial"]
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 

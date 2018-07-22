@@ -2,23 +2,22 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/sand_rough.jpg-136d6078ee3bb8c7c26da275d491604a.s3tc.stex"
-path.etc2="res://.import/sand_rough.jpg-136d6078ee3bb8c7c26da275d491604a.etc2.stex"
+path="res://.import/sand_rough.jpg-136d6078ee3bb8c7c26da275d491604a.stex"
 
 [deps]
 
 source_file="res://Materials/sand_rough.jpg"
-dest_files=[ "res://.import/sand_rough.jpg-136d6078ee3bb8c7c26da275d491604a.s3tc.stex", "res://.import/sand_rough.jpg-136d6078ee3bb8c7c26da275d491604a.etc2.stex" ]
+dest_files=[ "res://.import/sand_rough.jpg-136d6078ee3bb8c7c26da275d491604a.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=true
+flags/repeat=0
 flags/filter=true
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
@@ -26,5 +25,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

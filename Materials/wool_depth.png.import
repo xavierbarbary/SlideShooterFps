@@ -2,23 +2,22 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/wool_depth.png-72656d6cec31370641a1f27d5d221570.s3tc.stex"
-path.etc2="res://.import/wool_depth.png-72656d6cec31370641a1f27d5d221570.etc2.stex"
+path="res://.import/wool_depth.png-72656d6cec31370641a1f27d5d221570.stex"
 
 [deps]
 
 source_file="res://Materials/wool_depth.png"
-dest_files=[ "res://.import/wool_depth.png-72656d6cec31370641a1f27d5d221570.s3tc.stex", "res://.import/wool_depth.png-72656d6cec31370641a1f27d5d221570.etc2.stex" ]
+dest_files=[ "res://.import/wool_depth.png-72656d6cec31370641a1f27d5d221570.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=true
+flags/repeat=0
 flags/filter=true
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
@@ -26,5 +25,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0
