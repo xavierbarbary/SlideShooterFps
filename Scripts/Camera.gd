@@ -15,7 +15,7 @@ func _ready():
 	pass
 
 func _physics_process(delta):
-	var player = get_node("../")
+	var player = get_node("../Ball")
 	var cameraPos = player.get_translation()
 	cameraPos.y += 2
 	set_translation(cameraPos)

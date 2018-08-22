@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Movement.gd" type="Script" id=1]
 
@@ -19,6 +19,23 @@ _sections_unfolded = [ "Font", "Settings" ]
 
 default_font = SubResource( 2 )
 
+[sub_resource type="DynamicFontData" id=4]
+
+hinting = 2
+font_path = "res://Materials/fonts-japanese-gothic.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+
+size = 30
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 4 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=6]
+
+default_font = SubResource( 5 )
+
 [node name="Gui" type="ViewportContainer"]
 
 anchor_left = 0.0
@@ -36,42 +53,144 @@ stretch = true
 stretch_shrink = 1
 _sections_unfolded = [ "Size Flags", "Theme" ]
 
-[node name="MoveForward" type="Button" parent="." index="0"]
+[node name="ColorRect" type="ColorRect" parent="." index="0"]
 
-anchor_left = 0.0
-anchor_top = 0.5
-anchor_right = 0.0
-anchor_bottom = 0.5
-margin_left = 13.0
-margin_top = -271.0
-margin_right = 330.0
-margin_bottom = -170.0
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+margin_left = -299.0
+margin_bottom = 601.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Move Forward"
-flat = false
-align = 1
-script = ExtResource( 1 )
-_sections_unfolded = [ "Rect", "Theme" ]
+size_flags_vertical = 3
+color = Color( 0.46875, 0.46875, 0.46875, 0.469608 )
+_sections_unfolded = [ "Rect", "Size Flags" ]
 
-[node name="FPS" type="Button" parent="." index="1"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="ColorRect" index="0"]
 
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -317.0
-margin_top = -50.5
-margin_bottom = 50.5
+margin_left = -299.0
+margin_top = -300.0
+margin_bottom = 300.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+theme = SubResource( 6 )
+alignment = 0
+_sections_unfolded = [ "Material" ]
+
+[node name="PerSecond" type="VSplitContainer" parent="ColorRect/VBoxContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 299.0
+margin_bottom = 197.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+split_offset = 0
+collapsed = false
+dragger_visibility = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="EveryFiveSeconds" type="VSplitContainer" parent="ColorRect/VBoxContainer2" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 201.0
+margin_right = 299.0
+margin_bottom = 398.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+split_offset = 0
+collapsed = false
+dragger_visibility = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Every20Seconds" type="VSplitContainer" parent="ColorRect/VBoxContainer2" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 402.0
+margin_right = 299.0
+margin_bottom = 600.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+split_offset = 0
+collapsed = false
+dragger_visibility = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ColorRect2" type="ColorRect" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 302.0
+margin_bottom = 600.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+color = Color( 0.742188, 0.742188, 0.742188, 0.475137 )
+_sections_unfolded = [ "Grow Direction", "Size Flags" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 299.0
+margin_bottom = 600.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+theme = SubResource( 6 )
+alignment = 0
+_sections_unfolded = [ "Size Flags", "Theme" ]
+
+[node name="RotateLeft" type="Button" parent="ColorRect2/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 299.0
+margin_bottom = 37.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -83,49 +202,21 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "FPS"
+text = "Rotate Left"
 flat = false
 align = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Rect", "Theme" ]
 
-[node name="MoveBackward" type="Button" parent="." index="2"]
+[node name="RotateRight" type="Button" parent="ColorRect2/VBoxContainer" index="1"]
 
 anchor_left = 0.0
-anchor_top = 0.5
+anchor_top = 0.0
 anchor_right = 0.0
-anchor_bottom = 0.5
-margin_left = 15.0
-margin_top = -135.0
-margin_right = 332.0
-margin_bottom = -34.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Move Backwards"
-flat = false
-align = 1
-script = ExtResource( 1 )
-_sections_unfolded = [ "Rect", "Theme" ]
-
-[node name="RotateRight" type="Button" parent="." index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.5
-anchor_right = 0.0
-anchor_bottom = 0.5
-margin_left = 21.0
-margin_top = 12.0
-margin_right = 338.0
-margin_bottom = 113.0
+anchor_bottom = 0.0
+margin_top = 41.0
+margin_right = 299.0
+margin_bottom = 78.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -143,16 +234,15 @@ align = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Rect", "Theme" ]
 
-[node name="RotateLeft" type="Button" parent="." index="4"]
+[node name="MoveBackward" type="Button" parent="ColorRect2/VBoxContainer" index="2"]
 
 anchor_left = 0.0
-anchor_top = 0.5
+anchor_top = 0.0
 anchor_right = 0.0
-anchor_bottom = 0.5
-margin_left = 24.0
-margin_top = 164.0
-margin_right = 341.0
-margin_bottom = 265.0
+anchor_bottom = 0.0
+margin_top = 82.0
+margin_right = 299.0
+margin_bottom = 119.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -164,7 +254,59 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Rotate Left"
+text = "Move Backwards"
+flat = false
+align = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Rect", "Theme" ]
+
+[node name="MoveForward" type="Button" parent="ColorRect2/VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 123.0
+margin_right = 299.0
+margin_bottom = 160.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Move Forward"
+flat = false
+align = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Rect", "Theme" ]
+
+[node name="Fire" type="Button" parent="ColorRect2/VBoxContainer" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 164.0
+margin_right = 299.0
+margin_bottom = 201.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Fire"
 flat = false
 align = 1
 script = ExtResource( 1 )

@@ -19,4 +19,6 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="Player" parent="Players" index="0" instance=ExtResource( 4 )]
 
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.89368, 0 )
+
 
